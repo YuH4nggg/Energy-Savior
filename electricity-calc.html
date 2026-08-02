@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Savior</title>
+    <link rel="icon" type="image/x-icon" href="https://sdgs.un.org/sites/default/files/goals/image_logo_clean10008_8.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav> 
+        <div class="logo"> 
+            <a href="index.html ">
+                <img src="https://sdgs.un.org/sites/default/files/goals/image_logo_clean10008_8.jpg">
+            </a> 
+        </div> 
+        <div class="navbar-anchors"> 
+            <input type="checkbox" id="sidebar-active"> 
+            <label for="sidebar-active" class="open-sidebar-button"> 
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> 
+            </label>
+            <label id="overlay" for="sidebar-active"></label> 
+            <div class="links-container"> 
+                <label for="sidebar-active" class="close-sidebar-button"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> 
+                </label>
+                <a class="home-link" href="index.html">Home</a>
+                <a href="electricity-calc.html">Electricity Cost Calculator</a>
+                <a href="energy.html">Renewable Energy</a>
+                <a href="faq.html">FAQ</a> 
+            </div> 
+        </div> 
+    </nav>
+
+<div class="header">
+    <h1>⚡ Energy Usage Calculator ⚡</h1>
+    <p>Calculate your appliance electricity usage and cost.</p>
+</div>
+
+<div class="calculator">
+    <label>Appliance Name</label>
+    <input id="appliance" type="text" placeholder="Example: Air Conditioner">
+    <label>Power Usage (Watts)</label>
+    <input id="power" type="number" placeholder="Example: 1200">
+    <label>Hours Used Per Day</label>
+    <input id="hours" type="number" placeholder="Example: 5">
+    <label>Electricity Rate (RM/kWh)</label>
+    <input id="rate" type="number" value="0.57">
+    <button onclick="calculateEnergy()">
+        Calculate
+    </button>
+</div>
+<div class="result">
+    <h2 id="result-title">
+        Your Result
+    </h2>
+    <p id="output">
+        Enter your appliance details above.
+    </p>
+</div>
+<script src="calc.js"></script>
+</body>
+</html>

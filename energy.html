@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Savior</title>
+    <link rel="icon" type="image/x-icon" href="https://sdgs.un.org/sites/default/files/goals/image_logo_clean10008_8.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="energy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav> 
+        <div class="logo"> 
+            <a href="index.html ">
+                <img src="https://sdgs.un.org/sites/default/files/goals/image_logo_clean10008_8.jpg">
+            </a> 
+        </div> 
+        <div class="navbar-anchors"> 
+            <input type="checkbox" id="sidebar-active"> 
+            <label for="sidebar-active" class="open-sidebar-button"> 
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg> 
+            </label>
+            <label id="overlay" for="sidebar-active"></label> 
+            <div class="links-container"> 
+                <label for="sidebar-active" class="close-sidebar-button"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg> 
+                </label>
+                <a class="home-link" href="index.html">Home</a>
+                <a href="electricity-calc.html">Electricity Cost Calculator</a>
+                <a href="energy.html">Renewable Energy</a>
+                <a href="faq.html">FAQ</a> 
+            </div> 
+        </div>
+    </nav>
+
+<div class="header">
+    <h1>Renewable Energy Map</h1>
+    <p>Click a bubble to learn about each renewable energy source.</p>
+</div>
+
+<div class="bubble-map">
+
+    <div class="bubble solar" onclick="showInfo('solar')">
+        ☀️
+        <span>Solar</span>
+    </div>
+
+    <div class="bubble wind" onclick="showInfo('wind')">
+        💨
+        <span>Wind</span>
+    </div>
+
+    <div class="bubble main">
+        🌍
+        <span>Renewable Energy</span>
+    </div>
+
+    <div class="bubble hydro" onclick="showInfo('hydro')">
+        💧
+        <span>Hydro</span>
+    </div>
+
+    <div class="bubble geo" onclick="showInfo('geo')">
+        🌋
+        <span>Geothermal</span>
+    </div>
+
+    <div class="bubble biomass" onclick="showInfo('biomass')">
+        🌿
+        <span>Biomass</span>
+    </div>
+</div>
+
+<div class="info-box">
+    <h2 id="energy-title">
+        Click a Bubble
+    </h2>
+    <p id="description">
+        Select one of the renewable energy sources above.
+    </p>
+</div>
+<script src="energy.js"></script>
+</body>
+</html>

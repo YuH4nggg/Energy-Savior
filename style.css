@@ -1,0 +1,473 @@
+.changa-one-regular {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.changa-one-regular-italic {
+  font-family: "Changa One", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    /* background: url("https://frontend-cdn.solarreviews.com/solar-farm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: grayscale(100%); */
+}
+
+.bg-img{
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+}
+
+.bg-img video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    position: fixed;
+    font-size: 800%;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #f5c52a;
+    z-index: 1;
+    font-family: "Changa One", sans-serif;
+    font-weight: bolder;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.subtitle{
+    position: fixed;
+    font-size: 270%;
+    top: 70%;
+    left: 36%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #f5c52a;
+    z-index: 1;
+    font-family: "Changa One", sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    transition: opacity 0.5 ease;
+    /* opacity: 0;*/
+}
+
+/* @keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+} */
+
+.blank{
+    position: relative;
+    height: 1000px;
+    z-index: 5;
+    background: #dadada;
+    z-index: 2;
+}
+
+nav{
+  margin-bottom: 50px;
+  height: 60px;
+  background:#f5c52a;
+  backdrop-filter: blur(12px);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+  font: 100;
+  margin-top: 10px;
+  padding: 5px;
+  width: calc(100% - 32px);
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  overflow: visible;
+  top: 0;
+  border-radius: 999px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a{
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  border-radius: 999px;
+  transition: all 0.25s ease;
+  position: relative;
+  font-size: larger;
+  color: #f7b020;
+  font-weight: bold;
+
+}
+
+.logo{
+  width:100% !important;;
+  align-self: center !important;
+  display: flex !important;
+}
+
+.logo a:hover{
+  background-color: transparent;
+}
+
+nav img{
+  height:50px;
+  align-self: center;
+  justify-content: center;
+}
+
+.navbar-anchors a:hover{
+  background-color: #f5c52a;
+  transform: translateY(-2px);
+}
+
+.navbar-anchors a::after{
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 10px;
+  width: 60%;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  border-radius: 999px;
+}
+
+.navbar-anchors a:hover::after{
+  transform: scaleX(1);
+}
+
+nav .home-link{
+  margin-right: auto;
+}
+
+nav svg{
+  fill: var(--text-color);
+}
+
+#sidebar-active{
+  display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+  fill: #ffe282;
+}
+
+.links-container{
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 12px;
+  right: -100%;
+  z-index: 10;
+  width: 300px;
+  height: calc(100vh - 24px);
+  background: #fff5d4;
+  backdrop-filter: blur(12px);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+  transition: 0.75s ease-out;
+  border-radius: 24px 0 0 24px;
+  padding-top: 10px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+nav a{
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  padding: 20px 30px;
+  justify-content: flex-start;
+}
+
+.open-sidebar-button, .close-sidebar-button{
+  padding: 20px;
+  display: block;
+}
+
+#sidebar-active:checked ~ .links-container{
+  right: 0;
+}
+
+#sidebar-active:checked ~ #overlay{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.logo img{
+  height: 44px;
+  transition: transform 0.25s ease;
+}
+
+.logo a:hover img{
+  transform: scale(1.08) rotate(-2deg);
+}
+
+nav a:hover{
+    color: white;
+}
+
+.intro{
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 15%;
+    background:rgb(233, 230, 230);
+    z-index: 10;
+}
+
+.main-intro{
+    font-size:4rem;
+    color:#f5c52a;
+    margin-bottom:30px;
+    font-family:"Changa One", sans-serif;
+}
+
+.sub-intro{
+    font-size:1.5rem;
+    line-height:1.8;
+    max-width:900px;
+    color:#b4430b;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.main-intro, .sub-intro{
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.main-intro.show, .sub-intro.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.blank {
+    min-height: 100vh;
+    background: rgb(233, 230, 230);
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+/* Chart title */
+.blank h2 {
+    font-size: 2.7rem;
+    color: #f6892b;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Changa One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.blank p{
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #b4430b;
+}
+
+.chart-container {
+    background: #f7f7f7;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    width: 1000px;
+    justify-items: center;
+}
+
+.chart {
+    width: min(800px, 90%);
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-bottom: 4px solid black;
+    padding: 0 20px;
+}
+
+
+/* bar + year */
+.bar-group {
+    height: 100%;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+/* bars */
+.bar {
+    display: flex;
+    width: 200px;
+    height: 0;
+    background: linear-gradient(to top, #f5c52a, #ffe889);
+    border-radius: 15px 15px 0 0;
+    transition: height 1.2s ease-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bar-group p {
+    margin-top: 15px;
+    font-weight: bolder;
+    align-items: center;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#f7b020;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.bar span {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    margin-top: 15px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.left-panel{
+    position: sticky;
+    top: 120px;
+    width: 35%;
+    height: fit-content;
+}
+
+.left-panel h2{
+    padding-left: 10px;
+    font-size: 7vh;
+    font-family: "Changa One", sans-serif;
+    font-weight: lighter;
+}
+
+.left-panel p{
+    padding-left: 10px;
+    font-size: 2.3vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.left-panel video{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+
+}
+
+.content{
+    display:grid;
+    grid-template-columns:40% 60%;
+    gap:70px;
+    width:90%;
+    margin:auto;
+}
+
+.progress{
+    width: 100%;
+    background: rgb(233, 230, 230);
+    z-index: 20;
+}
+
+.card-reveal img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-reveal{
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.1);
+    margin-bottom:40px;
+    width: 50vh;
+    overflow: hidden;
+    transition:transform .3s ease;
+}
+
+.card-reveal h3{
+    padding-left: 10px;
+    font-family: "Changa One", sans-serif;
+    font-weight: lighter;
+}
+
+.card-reveal p{
+    padding-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+}
+
+.card-reveal:hover{
+    transform:translateY(-8px);
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px) scale(.96);
+    filter:blur(8px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    filter:blur(0);
+}
